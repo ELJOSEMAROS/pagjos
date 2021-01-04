@@ -4,13 +4,14 @@
     <title> MI PAGINA</title>
     <script>
       var rang;
+      var calculo=0;
       function obtener(){
-        rang=document.getElementById("#rongo");
+        rang=document.getElementById("rongo").value;
         rang.addEventListener("change",cambio,false);
-        document.getElementById("#envio").addEventListener("click",enviarr,false);
+        //document.getElementById("#envio").addEventListener("click",enviarr,false);
       }
       function cambio(){
-        var salida=document.getElementById("#rango")
+        var salida=document.getElementById("rango");
         var calculo=rang.value-20;
         if (rang.value<20){
           calculo=0;

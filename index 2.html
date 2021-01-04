@@ -1,0 +1,157 @@
+<!Doctype html>
+<html>
+  <head>
+    <title> MI PAGINA</title>
+    <script>
+      var rang;
+      function obtener(){
+        rang=document.getElementById("#rongo");
+        rang.addEventListener("change",cambio,false);
+        document.getElementById("#envio").addEventListener("click",enviarr,false);
+      }
+      function cambio(){
+        var salida=document.getElementById("#rango")
+        var calculo=rang.value-20;
+        if (rang.value<20){
+          calculo=0;
+          rang.value=20;
+        }
+        salida.innerHTML=calculo + " a " +rang.value;
+      }
+      window.addEventListener("load",obtener,false)
+    </script>
+    <style>
+      #table{
+        text-align: center;
+        background-color: burlywood;
+        border: 2px dotted blueviolet;
+        margin: auto;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <header>
+      <h1>Dios bienvenido a este lugar.</h1>
+    </header>
+      
+    <main>
+      <!--
+        <form >
+          <label> buscar
+            <input type="search" class="lab">
+          </label> <br>
+
+          <label>fecha
+            <input type="date" class="lab">
+          </label> <br>
+
+          <label>correo
+            <input type="email" class="lab">
+          </label> <br>
+          <input type="submit" id="enviar" value="Enviar Formulario">
+        </form>
+
+
+        <table style="width: 60%;border: 1px solid black; background: bisque; padding: 15px;">
+          <tr>
+            <th>personajes</th>
+            <th>confabulacion</th>
+          </tr>
+          <tr>
+            <td> <span> Moises </span> </td>
+            <td>con abraham</td>
+          </tr>
+          <tr>
+            <td>Abraham</td>
+            <td>con moises</td>
+          </tr>
+        </table>
+
+
+        <dl>
+        <dt>Personajes Bíblicos:</dt>
+        <ol type='I' reversed>
+          <li>Móises</li>
+            <dd>Fue el hombre que Dios usó para libertar a su pueblo y guiarlo al destino que Él tenía para ellos.</dd>
+          <li>Elías</li>
+          <dd>Fue un profeta y representante de Dios en la tierra, que por la palabra de Dios en la tierra hacía que la lluvia se detuviera por años y que volviera a caer; que decendiera fuegoo del cielo y lo que Dios le mandase que hicera.</dd>
+          <li>Eliseo</li>
+          <dd>Fue el sucesor de Elías.</dd>
+        </ol>
+        </dl>/*-->
+
+        <form name="Formulario 2" id="labels" method="GET">
+
+          <datalist id="datos" >
+            <option value="Una excelente pagina." ></option>
+            <option value="Muy buena pagina." ></option>
+            <option value="Una pagina mediocre." ></option>
+            <option value="Una mala pagina." ></option>
+          </datalist>
+          <label for="inp">Comentarios </label>
+          <input type="text" id="inp" class="lab" list="datos" placeholder="Por favor da tu opinion en el siguiente espacio.">
+
+          <label id="color">opcion de color  </label>
+            <input type="color" class="lab">
+
+          <label>edad
+            <input type="number" class="lab">
+          </label>
+
+          <label>nivel de excelencia de la pagina
+            <input type="range" id="rongo" min="0" max="100" step="20" value="20" class="lab">
+          </label>
+          <output id="rango">De 0 a 20</output>
+
+          <label>Resetear
+            <input type="reset" class="lab">
+          </label>
+
+          <input type="submit" id="envio" value="Enviar">
+        </form>
+        <br>
+        <br>
+        <br>
+      <form name="tabla" id="registro" method="GET">
+        <datalist id="sexo">
+          <option value="Masculino"></option>
+          <option value="Femenino"></option>
+        </datalist>
+        <table id="table">
+          <tr>
+            <td>Nombre:</td>
+            <td><input type="text" name="nombre" id="nomb" maxlength="16" required  placeholder="Introduzca su Nombre"></td>
+          </tr>
+          <tr>
+            <td>Apellido:</td>
+            <td><input pattern="[A-Za-z]" required placeholder="Introduzca primer Apellido"></td>
+          </tr>
+          <tr>
+            <td>Correo Electrónico:</td>
+            <td><input type="email" maxlength="40" required placeholder="Introduzca su Correo"></td>
+          </tr>
+          <tr>
+            <td>Sexo:</td>
+            <td><input list="sexo"  pattern="[A-Za-z]{9}" placeholder="Sexo"></td>
+          </tr>
+          <tr>
+            <td>Edad:</td>
+            <td><input type="number" min="8" max="120" maxlength="3" placeholder="Edad"></td>
+          </tr>      
+          <tr>
+            <td><input type="submit" value="Registrarse"></td>
+          </tr>    
+        </table>
+      </form>
+      <br>
+      <br>
+      <br>      
+    </main>
+    <footer> Derechos de autor reservados.</footer>
+
+    <aside>OTROS SITIOS WEB</aside>
+  </body>
+
+</html>|
